@@ -18,26 +18,69 @@
     https://www.w3schools.com/html/tryit.asp?filename=tryhtml_elem_output-->
 
 <h3>Suscribase a Nuestro Portal de Noticias! Crear una cuenta es rápido!</h3>
-Nombre:
-Apellido:
-Sexo: Masculino Femenino
-Edad:
-Email:
-Usuario:
-Password:
-Confirmar Password:
+<form name="form-sucripcion">
+    <fieldset>
+<legend>datos personales</legend>
+<p>
+<label for="nombre">nombre</label><input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre">
+</p>
+<p>
+<label for="apellido">Apellido:</label>  <input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido">
+</p>
+<p>
+Sexo:
+ <label for="masculino">Masculino</label> <input type="radio" name="sex" id="masculino" value="masculino">
+  <label for="femenino">Femenino</label> <input type="radio" name="sex" id="femenino" value="femenino">
+</p>
+<p>
+<label for="edad">Edad:</label> <input type="number" id="edad" name="edad" placeholder="edad">
+</p>
+<p>
+<label for="email">email</label> <input type="email" id="email" name="email" placeholder="Usuario@dominio.com">
+</p>
+</fieldset>
+<fieldset> <legend>usuarios</legend>
+<p>
+<label for="usuario">Usuario:</label> <input type="text" id="usuario" name="usuario" placeholder="nombre de usuario">
+</p>
+<p>
+<label for="password">Password:</label> <input type="password" id="password" name="password" placeholder="contrasenia">
+</p>
+<p>
+<label for="segunda-password">Confirmar Password:</label> <input type="password" id="segunda-password" name="segunda-password" placeholder="Confirmar contrasenia">
+</p>
+</fieldset>
+<fieldset>
+    <legend>tipo de sucripcion y temas</legend>
+<p> 
+    <label for="Tipo-servicio">Tipo de servicio: 
+</label>
+<select name="Tipo-servicio" id="Tipo-servicio">
+<option value="free">free</option>
+<option value="free">Standard</option>
+<option value="free">Premium</option> 
+</select>
+</p>
 
-Tipo de servicio: Free / Standard / Premium
-Tema:
-Política
-Negocios
-Tecnología
-Salud
-
-Agregue un comentario:
-
+<p>
+    Tema:
+<label for="politica"></label> <input type="checkbox" id="politica" name="tema" value="politica">
+<label for="negocio">Negocios</label> <input type="checkbox" id="negocio" name="tema" value="Negocios">
+<label for="Tecnología">Tecnología</label> <input type="checkbox" id="Tecnología" name="tema" value="Tecnología">
+<label for="salud">Salud</label> <input type="checkbox" id="salud" name="tema" value="salud">
+</p>
+</fieldset>
+<p>
+<label for="comentario">Agregue un comentario:</label>
+<textarea id="comentario">
+    deje su comentario
+</textarea>
+</p>
+<p>
+<button  type="button">
 Boton de Enviar
-
-
+</button>
+</p>
+</form>
 </body>
 </html>
