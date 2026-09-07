@@ -1,3 +1,7 @@
+:root{
+    --color-primario: red;
+    --color-secundario: blue;
+}
 main{
     display: grid;
     grid-template-columns: auto auto auto;
@@ -5,8 +9,8 @@ main{
     & div{
         border: 1px solid black;
         margin: 10px;
-        border-radius: 15px;
         text-align: center;
+        border-radius: 15px;
         padding: 10px;
     }
 
@@ -14,6 +18,7 @@ main{
         width: 100%;
     }
 }
+
 .item1{
     grid-area: header;
 }
@@ -32,11 +37,26 @@ main{
 
 .grid-container{
     display: grid;
+     grid-template-columns: 250px 1fr;
     grid-template-areas:
-    'header header header header' 
-    'nav nav nav nav'
-    'aside main main main'
-    'footer footer footer';
+    'header header ' 
+    'nav nav'
+    'aside main '
+    'footer footer ';
     gap: 10px;
 }
 
+
+a{
+    text-decoration: none;
+    background-color: var(--color-primario);
+    color: var(--color-text);
+    font-weight: 500;
+    padding: 5px;
+    transition: background-color 0.8s linear 0.2s;
+
+    &:hover {
+        background-color: var(--color-secundario);
+    }
+
+}
