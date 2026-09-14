@@ -18,7 +18,7 @@
 -  [x] Primer HTML
 -  [x] Secciones
 -  [x] Títulos
--  [ x] Listas
+-  [x] Listas
 -  [x] Link
 -  [x] Tablas I
 -  [x] Tablas II
@@ -26,19 +26,19 @@
 -  [x] Tablas VI
 -  [x] Comentarios
 -  [x] Formulario
--  [ ] Accesibilidad
--  [ ] Multimedia
+-  [x] Accesibilidad
+-  [x] Multimedia
 
 ### CSS
--  [ ] Propiedades tipográficas
--  [ ] Incrustado
--  [ ] Estilo con Descendientes
--  [ ] Pseudo Clases
--  [ ] CV
--  [ ] Backgrounds
+-  [x] Propiedades tipográficas
+-  [x] Incrustado
+-  [x] Estilo con Descendientes
+-  [x] Pseudo Clases
+-  [x] CV
+-  [x] Backgrounds
 -  [ ] Position
--  [ ] 2 Columnas
--  [ ] Grid
+-  [x] 2 Columnas
+-  [x] Grid
 -  [ ] grid-areas
 -  [ ] Mejora
 -  [ ] Transitions

@@ -1,0 +1,24 @@
+
+        .main-stay{
+            text-align: center;
+            background: linear-gradient(to right, rgb(229, 255, 0), blue);
+            
+        }
+        h3{
+         font-family: "Asap Sharp", sans-serif;
+         text-shadow: 10px 8px grey;
+        }
+        div{
+            border: 1px solid rgb(174, 0, 255);
+            margin: 15px 20px;
+            padding: 10px 25px 12px;
+            background-color: rgb(174, 0, 255, 0.6);
+            border-radius: 15px;
+            box-shadow: 10px 8px black;
+        }
+      #user{
+        width: 07%;
+        float: left;
+        border-radius: 50%;
+      }
+    
