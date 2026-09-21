@@ -65,3 +65,10 @@ function mostrarOcultar(valor){
   }
 
 }
+function calcularSuma(){
+  let sum1,sum2
+  sum1 = document.getElementById("nums1").value;
+  sum2 = document.getElementById("nums2").value;
+  document.getElementById("totalS").value = sum1 + Number(sum2);
+
+}

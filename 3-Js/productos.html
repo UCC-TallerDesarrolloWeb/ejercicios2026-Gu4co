@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>catalogo de productos</title>
+    <link href="catalogo.css" type="text/css" rel="stylesheet">
+    <script src="tienda.js"></script>
+    </head>
+    <body class="grid-container">
+        <header class="item1">
+            catalogo productos
+         </header>
+         <nav class="item2">
+           <a herf="productos.html"> link de navegacion</a>
+           <a herf="">carrito de compras</a>
+         </nav>
+         <aside class="item3">
+            <form name="filter" id="filter">
+            <fieldset>
+                <legend>buscador</legend>
+                <label for="search">buscar</label>
+                <input type="text" name="search" id="search" placeholder="buscar..">
+            </fieldset>
+            <fieldset>
+                <legend>precios</legend>
+                <p>
+                <label>minimo</label>
+                <input type="number" name="price-min" id="price-min" min="0">
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>precios</legend>
+                <p>
+                <label>maximo</label>
+                <input type="number" name="price-max" id="price-max" min="0">
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>tipo de productos</legend>
+                <p>
+                    <input type="checkbox" name="tipo" id="protectores" value="protectores">
+                    <label for="protectores">protectores</label>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>tipo de productos</legend>
+                <p>
+                    <input type="checkbox" name="tipo" id="entrenamiento" value="entrenamiento">
+                    <label for="entrenamiento">entrenamiento</label>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>tipo de productos</legend>
+                <p>
+                    <input type="checkbox" name="tipo" id="dobok" value="dobok">
+                    <label for="dobok">dobok</label>
+                </p>
+            </fieldset>
+            </form>
+         </aside>
+
+        <main class="item4">
+            <dialog id="modal">
+                <h2>cabezal cerrado</h2>
+                <p>cabezal sparing disponible color azul o rojo</p>
+                <button type="button" onclick="cerrarModal()">cerrar</button>
+            </dialog>
+            <div>
+                <img src="https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/cabezal-cerrado.webp  " alt="cabezal cerrado">
+                <h3>cabezal cerrado</h3>
+                <button type="button" onclick="mostrarModal()">ver detalle del productos</button>
+            </div>
+             <div>
+                <img src="https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/dobok.webp  " alt="dobok.webp">
+                <h3>dobok webp</h3>
+            </div>
+            <div>
+                <img src="https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/escudo-potencia.webp  " alt="escudo potencia">
+                <h3>escudo potencia</h3>
+            </div>
+            <div>
+                <img src="https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/foco-con-dedos.webp  " alt="foco con dedos">
+                <h3>foco con dedos </h3>
+            </div>
+            <div>
+                <img src="https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/protectores-manos.webp  " alt="protectores manos">
+                <h3>protectores manos </h3>
+            </div>
+            <div>
+                <img src="https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/protectores-manos.webp  " alt="protectores pies">
+                <h3>protectores pies</h3>
+            </div>
+
+         </main>
+         <footer class="item5">contactos</footer>
+       
+
+    </body>
+</html>
