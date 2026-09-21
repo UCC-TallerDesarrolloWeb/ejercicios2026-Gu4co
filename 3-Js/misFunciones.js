@@ -6,6 +6,7 @@
  * @return Valor que retorna
  */
 convertirUnidades = (id , value) => {
+  value = value.replace(",",".");
     if(isNaN(value)){
       alert("se ingreso valores incorectos: "+id);
       metro = "";
@@ -13,27 +14,31 @@ convertirUnidades = (id , value) => {
       yarda = "";
       pulgada = "";
     }else if(id=="metro"){
-      document.getElementById("pulgada").value = value*39.3701;
-      document.getElementById("pie").value = value*3.2804;
-      document.getElementById("yarda").value = value*1.09361;
+      document.getElementById("pulgada").value = value*39.3701.toFixed(2);
+      document.getElementById("pie").value = value*3.2804.toFixed(2);
+      document.getElementById("yarda").value = value*1.09361.toFixed(2);
 
     } else if (id == "pie") {
-    document.getElementById("metro").value = value * 0.3048;
-    document.getElementById("pulgada").value = value * 12;
-    document.getElementById("yarda").value = value / 3;
+    document.getElementById("metro").value = value * 0.3048.toFixed(2);
+    document.getElementById("pulgada").value = value * 12 .toFixed(2);
+    document.getElementById("yarda").value = value / 3 .toFixed(2);
   }
 
   else if (id == "yarda") {
-    document.getElementById("metro").value = value * 0.9144;
-    document.getElementById("pie").value = value * 3;
-    document.getElementById("pulgada").value = value * 36;
+    document.getElementById("metro").value = value * 0.9144.toFixed(2);
+    document.getElementById("pie").value = value * 3 .toFixed(2);
+    document.getElementById("pulgada").value = value * 36 .toFixed(2);
   }
 
   else if (id == "pulgada") {
-    document.getElementById("metro").value = value * 0.0254;
-    document.getElementById("pie").value = value / 12;
-    document.getElementById("yarda").value = value / 36;
+    document.getElementById("metro").value = value * 0.0254.toFixed(2);
+    document.getElementById("pie").value = value / 12 .toFixed(2);
+    document.getElementById("yarda").value = value / 36 .toFixed(2);
   }
+document.getElementById("metro").value = (value * 0.0254).toFixed(2);
+ document.getElementById("pie").value = (value / 12).toFixed(2);
+document.getElementById("yarda").value = (value / 36).toFixed(2);
+
 }
 
 
@@ -66,9 +71,8 @@ function mostrarOcultar(valor){
 
 }
 function calcularSuma(){
-  let sum1,sum2
-  sum1 = document.getElementById("nums1").value;
-  sum2 = document.getElementById("nums2").value;
-  document.getElementById("totalS").value = sum1 + Number(sum2);
+  sum1 = Number(document.getElementById("nums1").value);
+  sum2 = Number(document.getElementById("nums2").value);
+  document.getElementById("totalS").innerText = sum1 + Number(sum2);
 
 }

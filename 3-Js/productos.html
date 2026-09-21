@@ -5,7 +5,7 @@
     <link href="catalogo.css" type="text/css" rel="stylesheet">
     <script src="tienda.js"></script>
     </head>
-    <body class="grid-container">
+    <body class="grid-container" onload="mostrarCatalogo()">
         <header class="item1">
             catalogo productos
          </header>
@@ -57,39 +57,14 @@
             </fieldset>
             </form>
          </aside>
-
-        <main class="item4">
-            <dialog id="modal">
+<dialog id="modal">
                 <h2>cabezal cerrado</h2>
                 <p>cabezal sparing disponible color azul o rojo</p>
                 <button type="button" onclick="cerrarModal()">cerrar</button>
             </dialog>
-            <div>
-                <img src="https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/cabezal-cerrado.webp  " alt="cabezal cerrado">
-                <h3>cabezal cerrado</h3>
-                <button type="button" onclick="mostrarModal()">ver detalle del productos</button>
-            </div>
-             <div>
-                <img src="https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/dobok.webp  " alt="dobok.webp">
-                <h3>dobok webp</h3>
-            </div>
-            <div>
-                <img src="https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/escudo-potencia.webp  " alt="escudo potencia">
-                <h3>escudo potencia</h3>
-            </div>
-            <div>
-                <img src="https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/foco-con-dedos.webp  " alt="foco con dedos">
-                <h3>foco con dedos </h3>
-            </div>
-            <div>
-                <img src="https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/protectores-manos.webp  " alt="protectores manos">
-                <h3>protectores manos </h3>
-            </div>
-            <div>
-                <img src="https://ucc-tallerdesarrolloweb.github.io/filminas/images/ejercicios/protectores-manos.webp  " alt="protectores pies">
-                <h3>protectores pies</h3>
-            </div>
-
+        <main class="item4" id="catalogo">
+            
+           
          </main>
          <footer class="item5">contactos</footer>
        
