@@ -1,65 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
-    <title>catalogo de productos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Catálogo de productos</title>
     <link href="catalogo.css" type="text/css" rel="stylesheet">
-    <script src="tienda.js"></script>
+    <script src="tienda.js" defer></script>
     </head>
-    <body class="grid-container" onload="mostrarCatalogo()">
+    <body class="grid-container">
         <header class="item1">
-            catalogo productos
+            <h1>Catálogo de productos</h1>
          </header>
          <nav class="item2">
-           <a herf="productos.html"> link de navegacion</a>
-           <a herf="">carrito de compras</a>
+           <a href="productos.html" aria-current="page">Productos</a>
+           <a href="carrito.html">Carrito de compras (<span id="contador-carrito">0</span>)</a>
+           <div id="cant-pro"></div>
          </nav>
+         <p id="mensaje" class="mensaje" role="status" aria-live="polite"></p>
          <aside class="item3">
-            <form name="filter" id="filter">
+            <form name="filter" id="filter" onsubmit="event.preventDefault(); filtrarProducto()">
             <fieldset>
                 <legend>buscador</legend>
                 <label for="search">buscar</label>
-                <input type="text" name="search" id="search" placeholder="buscar..">
+                <input type="text" name="search" id="search" placeholder="buscar.." oninput="filtrarProducto()">
             </fieldset>
             <fieldset>
                 <legend>precios</legend>
                 <p>
-                <label>minimo</label>
-                <input type="number" name="price-min" id="price-min" min="0">
+                <label for="price-min">minimo</label>
+                <input type="number" name="price-min" id="price-min" min="0" step="0.01" oninput="filtrarProducto()">
                 </p>
             </fieldset>
             <fieldset>
                 <legend>precios</legend>
                 <p>
-                <label>maximo</label>
-                <input type="number" name="price-max" id="price-max" min="0">
+                <label for="price-max">maximo</label>
+                <input type="number" name="price-max" id="price-max" min="0" step="0.01" oninput="filtrarProducto()">
                 </p>
+            </fieldset>
+            <fieldset>
+                <legend>marca</legend>
+                <label for="marca">marca</label>
+                <select id="marca" onchange="filtrarProducto()">
+                    <option value="todas">todas</option>
+                    <option value="gran marc">gran marc</option>
+                    <option value="daedo">Daedo</option>
+                </select>
             </fieldset>
             <fieldset>
                 <legend>tipo de productos</legend>
                 <p>
-                    <input type="checkbox" name="tipo" id="protectores" value="protectores">
+                    <input type="checkbox" name="tipo" id="protectores" value="protectores" onchange="filtrarProducto()">
                     <label for="protectores">protectores</label>
                 </p>
             </fieldset>
             <fieldset>
                 <legend>tipo de productos</legend>
                 <p>
-                    <input type="checkbox" name="tipo" id="entrenamiento" value="entrenamiento">
+                    <input type="checkbox" name="tipo" id="entrenamiento" value="entrenamiento" onchange="filtrarProducto()">
                     <label for="entrenamiento">entrenamiento</label>
                 </p>
             </fieldset>
             <fieldset>
                 <legend>tipo de productos</legend>
                 <p>
-                    <input type="checkbox" name="tipo" id="dobok" value="dobok">
+                    <input type="checkbox" name="tipo" id="dobok" value="dobok" onchange="filtrarProducto()">
                     <label for="dobok">dobok</label>
                 </p>
             </fieldset>
+            <fieldset>
+                <legend>Orden</legend>
+                <label for="orden">Ordenar productos</label>
+                <select id="orden" onchange="filtrarProducto()">
+                    <option value="original">Orden original</option>
+                    <option value="precio-asc">Precio: menor a mayor</option>
+                    <option value="precio-desc">Precio: mayor a menor</option>
+                    <option value="nombre-asc">Nombre: A a Z</option>
+                    <option value="nombre-desc">Nombre: Z a A</option>
+                </select>
+            </fieldset>
+            <button type="button" onclick="limpiarFiltros()">Limpiar filtros</button>
             </form>
          </aside>
-<dialog id="modal">
-                <h2>cabezal cerrado</h2>
-                <p>cabezal sparing disponible color azul o rojo</p>
+<dialog id="modal" aria-labelledby="nombre-producto">
+                <h2 id="nombre-producto">cabezal cerrado</h2>
+                <p id="descripcion-producto">cabezal sparing disponible color azul o rojo</p>
+                <p id="precio-producto"></p>
                 <button type="button" onclick="cerrarModal()">cerrar</button>
             </dialog>
         <main class="item4" id="catalogo">
