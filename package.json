@@ -1,0 +1,20 @@
+{
+  "name": "joa",
+  "version": "1.0.0",
+  "description": "ejercisios js",
+  "homepage": "https://github.com/UCC-TallerDesarrolloWeb/ejercicios2026-Gu4co#readme",
+  "bugs": {
+    "url": "https://github.com/UCC-TallerDesarrolloWeb/ejercicios2026-Gu4co/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UCC-TallerDesarrolloWeb/ejercicios2026-Gu4co.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
