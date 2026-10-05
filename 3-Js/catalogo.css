@@ -85,3 +85,7 @@ dialog::backdrop { background: rgb(0 0 0 / 50%); }
     .pagina-carrito { grid-template-areas: 'header' 'nav' 'mensaje' 'main' 'footer'; }
     main { grid-template-columns: minmax(0, 1fr); }
 }
+#cant-pro{
+    color: var(--color-primario);
+    font-weight: 600;
+}
